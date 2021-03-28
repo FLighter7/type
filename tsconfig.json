@@ -1,0 +1,12 @@
+{
+  "include": ["src/*.ts"],
+  "compilerOptions": {
+    "outDir": "esm",
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "Node",
+    "declaration": true,
+    "esModuleInterop": true,
+    "noEmitOnError": true
+  }
+}
