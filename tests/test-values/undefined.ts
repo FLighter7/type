@@ -11,6 +11,6 @@ export const UndefinedValues: Value[] = [
     value: 'undefined',
     type: 'string',
     strictType: 'string',
-    passableFunctions: [],
+    passableFunctions: ['isStringifiedUndefined'],
   },
 ]
