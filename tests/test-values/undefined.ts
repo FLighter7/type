@@ -5,7 +5,7 @@ export const UndefinedValues: Value[] = [
     value: undefined,
     type: 'undefined',
     strictType: 'undefined',
-    passableFunctions: [],
+    passableFunctions: ['isUndefined'],
   },
   {
     value: 'undefined',
