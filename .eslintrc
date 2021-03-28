@@ -1,0 +1,21 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "parserOptions": {
+    "project": "tsconfig.json"
+  },
+  "extends": [
+    "eslint:recommended",
+    "google",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking"
+  ],
+  "rules": {
+    "no-multiple-empty-lines": ["error", {"max": 1, "maxEOF": 0, "maxBOF": 0}],
+    "lines-between-class-members": ["error", "always", {"exceptAfterSingleLine": true}],
+    "max-len": ["warn", {"code": 120}],
+    "valid-jsdoc": ["off"]
+  }
+}
