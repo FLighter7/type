@@ -11,7 +11,7 @@
   "files":       ["esm", "umd"],
   "type":        "module",
   "scripts": {
-    "start":      "npm-run-all -s check test build:*",
+    "start":      "npm-run-all -s check build:* test",
     "check":      "eslint src/*.ts",
     "test":       "jest",
     "build:esm":  "del-cli esm/* && tsc",
