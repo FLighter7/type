@@ -6,7 +6,7 @@ type TypeofType = 'string' | 'number'
 /**
  * Return type using `typeof` operator
  *
- * @param {unknown} val
+ * @param {unknown} val any value
  * @returns {TypeofType}
  */
 export const getType = (val: unknown): TypeofType => typeof val;
