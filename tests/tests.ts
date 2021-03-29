@@ -1,12 +1,11 @@
 import prettyFormat from 'pretty-format';
 import values from './test-values';
+import availableForTest from './availableForTest';
 import * as Type from '../umd';
-
-const functions = ['getType', 'isUndefined', 'isStringifiedUndefined'];
 
 export default () => {
   // Each function
-  functions.forEach(f => {
+  availableForTest.forEach(f => {
     describe(`${f}()`, () => {
 
       // Each value in function
@@ -21,11 +20,11 @@ export default () => {
           );
 
         // getStrictType
-        } else if(f === 'getStrictType') {
-          test(
-            `Strict type of "${prettyValue}" is "${strictType}"`,
-            () => expect(Type[f](value)).toBe(strictType)
-          );
+        // } else if(f === 'getStrictType') {
+        //   test(
+        //     `Strict type of "${prettyValue}" is "${strictType}"`,
+        //     () => expect(Type[f](value)).toBe(strictType)
+        //   );
 
         // is* functions  
         } else {
@@ -47,7 +46,7 @@ export default () => {
 
           test(
             `The value "${prettyValue}" ${passText} the test`,
-            () => expect(Type[f](value, ...args)).toBe(valuePassTest)
+            () => expect(Type[f](value, ...(args as any))).toBe(valuePassTest)
           );
         }
       });
