@@ -15,3 +15,6 @@ export * from './isSymbol.js';
 // NaN
 export * from './isNan.js';
 export * from './isStringifiedNan.js';
+
+// Function
+export * from './isFunction.js';
