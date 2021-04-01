@@ -6,4 +6,5 @@ export default <(keyof typeof Type)[]>[
   'isStringifiedUndefined',
   'isNull',
   'isStringifiedNull',
+  'isSymbol',
 ];

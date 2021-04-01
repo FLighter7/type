@@ -5,6 +5,6 @@ export const SymbolValues: Value[] = [
     value: Symbol(),
     type: 'symbol',
     strictType: 'symbol',
-    passableFunctions: [],
+    passableFunctions: ['isSymbol'],
   },
 ]
