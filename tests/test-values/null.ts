@@ -5,12 +5,15 @@ export const NullValues: Value[] = [
     value: null,
     type: 'object',
     strictType: 'null',
-    passableFunctions: [],
+    passableFunctions: ['isNull'],
   },
   {
     value: 'null',
     type: 'string',
     strictType: 'string',
-    passableFunctions: [],
+    passableFunctions: [
+      'isStringifiedNull',
+      ['isNull', true],
+    ],
   },
 ]
