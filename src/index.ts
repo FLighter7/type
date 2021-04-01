@@ -8,3 +8,6 @@ export * from './isStringifiedUndefined.js';
 // Null
 export * from './isNull.js';
 export * from './isStringifiedNull.js';
+
+// Symbol
+export * from './isSymbol.js';
