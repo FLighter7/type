@@ -9,4 +9,5 @@ export default <(keyof typeof Type)[]>[
   'isSymbol',
   'isNan',
   'isStringifiedNan',
+  'isFunction',
 ];
