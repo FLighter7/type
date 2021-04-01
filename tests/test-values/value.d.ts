@@ -1,6 +1,10 @@
+import * as Type from '../../umd';
+
+type FunctionName = keyof typeof Type;
+
 export type Value = {
   value: unknown,
-  type: string,
+  type: ReturnType<typeof Type.getType>,
   strictType: string,
-  passableFunctions: (string | [string, unknown])[],
+  passableFunctions: (FunctionName | [FunctionName, unknown])[],
 }
