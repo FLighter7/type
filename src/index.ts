@@ -11,3 +11,7 @@ export * from './isStringifiedNull.js';
 
 // Symbol
 export * from './isSymbol.js';
+
+// NaN
+export * from './isNan.js';
+export * from './isStringifiedNan.js';
