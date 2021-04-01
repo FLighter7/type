@@ -19,4 +19,10 @@ export const FunctionValues: Value[] = [
     strictType: 'function',
     passableFunctions: [],
   },
+  {
+    value: class{},
+    type: 'function',
+    strictType: 'function',
+    passableFunctions: [],
+  },
 ]
