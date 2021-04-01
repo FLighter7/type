@@ -5,12 +5,15 @@ export const NanValues: Value[] = [
     value: NaN,
     type: 'number',
     strictType: 'nan',
-    passableFunctions: [],
+    passableFunctions: ['isNan'],
   },
   {
     value: 'NaN',
     type: 'string',
     strictType: 'string',
-    passableFunctions: [],
+    passableFunctions: [
+      'isStringifiedNan',
+      ['isNan', true],
+    ],
   },
 ]

@@ -7,4 +7,6 @@ export default <(keyof typeof Type)[]>[
   'isNull',
   'isStringifiedNull',
   'isSymbol',
+  'isNan',
+  'isStringifiedNan',
 ];
