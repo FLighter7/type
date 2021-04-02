@@ -20,6 +20,7 @@ export const BooleanValues: Value[] = [
     passableFunctions: [
       'isStringifiedBoolean',
       ['isBoolean', true],
+      'isString',
     ],
   },
   {
@@ -29,6 +30,7 @@ export const BooleanValues: Value[] = [
     passableFunctions: [
       'isStringifiedBoolean',
       ['isBoolean', true],
+      'isString',
     ],
   },
   {

@@ -5,13 +5,17 @@ export const StringValues: Value[] = [
     value: '',
     type: 'string',
     strictType: 'string',
-    passableFunctions: [],
+    passableFunctions: [
+      'isString',
+    ],
   },
   {
     value: String(''),
     type: 'string',
     strictType: 'string',
-    passableFunctions: [],
+    passableFunctions: [
+      'isString',
+    ],
   },
   {
     value: new String(''),
@@ -23,13 +27,17 @@ export const StringValues: Value[] = [
     value: 'string',
     type: 'string',
     strictType: 'string',
-    passableFunctions: [],
+    passableFunctions: [
+      'isString',
+    ],
   },
   {
     value: String('string'),
     type: 'string',
     strictType: 'string',
-    passableFunctions: [],
+    passableFunctions: [
+      'isString',
+    ],
   },
   {
     value: new String('string'),

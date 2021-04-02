@@ -14,6 +14,7 @@ export const NanValues: Value[] = [
     passableFunctions: [
       'isStringifiedNan',
       ['isNan', true],
+      'isString',
     ],
   },
 ]

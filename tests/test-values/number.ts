@@ -53,48 +53,64 @@ export const NumberValues: Value[] = [
     value: '0',
     type: 'string',
     strictType: 'string',
-    passableFunctions: [],
+    passableFunctions: [
+      'isString',
+    ],
   },
   {
     value: '-1',
     type: 'string',
     strictType: 'string',
-    passableFunctions: [],
+    passableFunctions: [
+      'isString',
+    ],
   },
   {
     value: '1',
     type: 'string',
     strictType: 'string',
-    passableFunctions: [],
+    passableFunctions: [
+      'isString',
+    ],
   },
   {
     value: '-1.24',
     type: 'string',
     strictType: 'string',
-    passableFunctions: [],
+    passableFunctions: [
+      'isString',
+    ],
   },
   {
     value: '1.24',
     type: 'string',
     strictType: 'string',
-    passableFunctions: [],
+    passableFunctions: [
+      'isString',
+    ],
   },
   {
     value: 'Infinity',
     type: 'string',
     strictType: 'string',
-    passableFunctions: [],
+    passableFunctions: [
+      'isString',
+    ],
   },
   {
     value: '+Infinity',
     type: 'string',
     strictType: 'string',
-    passableFunctions: [],
+    passableFunctions: [
+      'isString',
+    ],
   },
   {
     value: '-Infinity',
     type: 'string',
     strictType: 'string',
-    passableFunctions: [],
+    passableFunctions: [
+      'isString',
+    ],
   },
 ]

@@ -14,6 +14,7 @@ export const NullValues: Value[] = [
     passableFunctions: [
       'isStringifiedNull',
       ['isNull', true],
+      'isString',
     ],
   },
 ]
