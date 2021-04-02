@@ -6,5 +6,5 @@ export type Value = {
   value: unknown,
   type: ReturnType<typeof Type.getType>,
   strictType: string,
-  passableFunctions: (FunctionName | [FunctionName, unknown])[],
+  passableFunctions: (FunctionName | [FunctionName, ...unknown[]])[],
 }
