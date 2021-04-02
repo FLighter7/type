@@ -25,3 +25,7 @@ export * from './isStringifiedBoolean.js';
 
 // String
 export * from './isString.js';
+
+// Number
+export * from './isNumber.js';
+export * from './isStringifiedNumber.js';
