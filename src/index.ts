@@ -35,3 +35,5 @@ export * from './isFiniteNumber.js';
 export * from './isStringifiedFiniteNumber.js';
 export * from './isPositiveNumber.js';
 export * from './isStringifiedPositiveNumber.js';
+export * from './isNegativeNumber.js';
+export * from './isStringifiedNegativeNumber.js';
