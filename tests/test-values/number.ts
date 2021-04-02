@@ -5,43 +5,57 @@ export const NumberValues: Value[] = [
     value: 0,
     type: 'number',
     strictType: 'number',
-    passableFunctions: [],
+    passableFunctions: [
+      'isNumber',
+    ],
   },
   {
     value: -1,
     type: 'number',
     strictType: 'number',
-    passableFunctions: [],
+    passableFunctions: [
+      'isNumber',
+    ],
   },
   {
     value: 1,
     type: 'number',
     strictType: 'number',
-    passableFunctions: [],
+    passableFunctions: [
+      'isNumber',
+    ],
   },
   {
     value: -1.24,
     type: 'number',
     strictType: 'number',
-    passableFunctions: [],
+    passableFunctions: [
+      'isNumber',
+    ],
   },
   {
     value: 1.24,
     type: 'number',
     strictType: 'number',
-    passableFunctions: [],
+    passableFunctions: [
+      'isNumber',
+    ],
   },
   {
     value: Infinity,
     type: 'number',
     strictType: 'number',
-    passableFunctions: [],
+    passableFunctions: [
+      'isNumber',
+    ],
   },
   {
     value: -Infinity,
     type: 'number',
     strictType: 'number',
-    passableFunctions: [],
+    passableFunctions: [
+      'isNumber',
+    ],
   },
   {
     value: new Number(),
@@ -55,6 +69,8 @@ export const NumberValues: Value[] = [
     strictType: 'string',
     passableFunctions: [
       'isString',
+      'isStringifiedNumber',
+      ['isNumber', true],
     ],
   },
   {
@@ -63,6 +79,8 @@ export const NumberValues: Value[] = [
     strictType: 'string',
     passableFunctions: [
       'isString',
+      'isStringifiedNumber',
+      ['isNumber', true],
     ],
   },
   {
@@ -71,6 +89,8 @@ export const NumberValues: Value[] = [
     strictType: 'string',
     passableFunctions: [
       'isString',
+      'isStringifiedNumber',
+      ['isNumber', true],
     ],
   },
   {
@@ -79,6 +99,8 @@ export const NumberValues: Value[] = [
     strictType: 'string',
     passableFunctions: [
       'isString',
+      'isStringifiedNumber',
+      ['isNumber', true],
     ],
   },
   {
@@ -87,6 +109,8 @@ export const NumberValues: Value[] = [
     strictType: 'string',
     passableFunctions: [
       'isString',
+      'isStringifiedNumber',
+      ['isNumber', true],
     ],
   },
   {
@@ -95,6 +119,8 @@ export const NumberValues: Value[] = [
     strictType: 'string',
     passableFunctions: [
       'isString',
+      'isStringifiedNumber',
+      ['isNumber', true],
     ],
   },
   {
@@ -103,6 +129,8 @@ export const NumberValues: Value[] = [
     strictType: 'string',
     passableFunctions: [
       'isString',
+      'isStringifiedNumber',
+      ['isNumber', true],
     ],
   },
   {
@@ -111,6 +139,8 @@ export const NumberValues: Value[] = [
     strictType: 'string',
     passableFunctions: [
       'isString',
+      'isStringifiedNumber',
+      ['isNumber', true],
     ],
   },
 ]

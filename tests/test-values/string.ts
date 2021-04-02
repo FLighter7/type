@@ -7,6 +7,8 @@ export const StringValues: Value[] = [
     strictType: 'string',
     passableFunctions: [
       'isString',
+      ['isStringifiedNumber', true],
+      ['isNumber', true, true],
     ],
   },
   {
@@ -15,6 +17,8 @@ export const StringValues: Value[] = [
     strictType: 'string',
     passableFunctions: [
       'isString',
+      ['isStringifiedNumber', true],
+      ['isNumber', true, true],
     ],
   },
   {
@@ -44,5 +48,25 @@ export const StringValues: Value[] = [
     type: 'object',
     strictType: 'object',
     passableFunctions: [],
+  },
+  {
+    value: '  ',
+    type: 'string',
+    strictType: 'string',
+    passableFunctions: [
+      'isString',
+      ['isStringifiedNumber', true],
+      ['isNumber', true, true],
+    ],
+  },
+  {
+    value: String('  '),
+    type: 'string',
+    strictType: 'string',
+    passableFunctions: [
+      'isString',
+      ['isStringifiedNumber', true],
+      ['isNumber', true, true],
+    ],
   },
 ]

@@ -13,4 +13,6 @@ export default <(keyof typeof Type)[]>[
   'isBoolean',
   'isStringifiedBoolean',
   'isString',
+  'isNumber',
+  'isStringifiedNumber',
 ];
