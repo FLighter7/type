@@ -5,25 +5,31 @@ export const BooleanValues: Value[] = [
     value: true,
     type: 'boolean',
     strictType: 'boolean',
-    passableFunctions: [],
+    passableFunctions: ['isBoolean'],
   },
   {
     value: false,
     type: 'boolean',
     strictType: 'boolean',
-    passableFunctions: [],
+    passableFunctions: ['isBoolean'],
   },
   {
     value: 'true',
     type: 'string',
     strictType: 'string',
-    passableFunctions: [],
+    passableFunctions: [
+      'isStringifiedBoolean',
+      ['isBoolean', true],
+    ],
   },
   {
     value: 'false',
     type: 'string',
     strictType: 'string',
-    passableFunctions: [],
+    passableFunctions: [
+      'isStringifiedBoolean',
+      ['isBoolean', true],
+    ],
   },
   {
     value: new Boolean(),

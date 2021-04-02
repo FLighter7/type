@@ -10,4 +10,6 @@ export default <(keyof typeof Type)[]>[
   'isNan',
   'isStringifiedNan',
   'isFunction',
+  'isBoolean',
+  'isStringifiedBoolean',
 ];
