@@ -19,4 +19,6 @@ export default <(keyof typeof Type)[]>[
   'isStringifiedInfinity',
   'isFiniteNumber',
   'isStringifiedFiniteNumber',
+  'isPositiveNumber',
+  'isStringifiedPositiveNumber',
 ];
