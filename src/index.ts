@@ -29,3 +29,5 @@ export * from './isString.js';
 // Number
 export * from './isNumber.js';
 export * from './isStringifiedNumber.js';
+export * from './isInfinity.js';
+export * from './isStringifiedInfinity.js';
