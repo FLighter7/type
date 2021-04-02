@@ -7,6 +7,7 @@ export const NumberValues: Value[] = [
     strictType: 'number',
     passableFunctions: [
       'isNumber',
+      'isFiniteNumber',
     ],
   },
   {
@@ -15,6 +16,7 @@ export const NumberValues: Value[] = [
     strictType: 'number',
     passableFunctions: [
       'isNumber',
+      'isFiniteNumber',
     ],
   },
   {
@@ -23,6 +25,7 @@ export const NumberValues: Value[] = [
     strictType: 'number',
     passableFunctions: [
       'isNumber',
+      'isFiniteNumber',
     ],
   },
   {
@@ -31,6 +34,7 @@ export const NumberValues: Value[] = [
     strictType: 'number',
     passableFunctions: [
       'isNumber',
+      'isFiniteNumber',
     ],
   },
   {
@@ -39,6 +43,7 @@ export const NumberValues: Value[] = [
     strictType: 'number',
     passableFunctions: [
       'isNumber',
+      'isFiniteNumber',
     ],
   },
   {
@@ -73,6 +78,8 @@ export const NumberValues: Value[] = [
       'isString',
       'isStringifiedNumber',
       ['isNumber', true],
+      'isStringifiedFiniteNumber',
+      ['isFiniteNumber', true],
     ],
   },
   {
@@ -83,6 +90,8 @@ export const NumberValues: Value[] = [
       'isString',
       'isStringifiedNumber',
       ['isNumber', true],
+      'isStringifiedFiniteNumber',
+      ['isFiniteNumber', true],
     ],
   },
   {
@@ -93,6 +102,8 @@ export const NumberValues: Value[] = [
       'isString',
       'isStringifiedNumber',
       ['isNumber', true],
+      'isStringifiedFiniteNumber',
+      ['isFiniteNumber', true],
     ],
   },
   {
@@ -103,6 +114,8 @@ export const NumberValues: Value[] = [
       'isString',
       'isStringifiedNumber',
       ['isNumber', true],
+      'isStringifiedFiniteNumber',
+      ['isFiniteNumber', true],
     ],
   },
   {
@@ -113,6 +126,8 @@ export const NumberValues: Value[] = [
       'isString',
       'isStringifiedNumber',
       ['isNumber', true],
+      'isStringifiedFiniteNumber',
+      ['isFiniteNumber', true],
     ],
   },
   {

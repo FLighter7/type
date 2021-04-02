@@ -9,6 +9,8 @@ export const StringValues: Value[] = [
       'isString',
       ['isStringifiedNumber', true],
       ['isNumber', true, true],
+      ['isStringifiedFiniteNumber', true],
+      ['isFiniteNumber', true, true],
     ],
   },
   {
@@ -19,6 +21,8 @@ export const StringValues: Value[] = [
       'isString',
       ['isStringifiedNumber', true],
       ['isNumber', true, true],
+      ['isStringifiedFiniteNumber', true],
+      ['isFiniteNumber', true, true],
     ],
   },
   {
@@ -57,6 +61,8 @@ export const StringValues: Value[] = [
       'isString',
       ['isStringifiedNumber', true],
       ['isNumber', true, true],
+      ['isStringifiedFiniteNumber', true],
+      ['isFiniteNumber', true, true],
     ],
   },
   {
@@ -67,6 +73,8 @@ export const StringValues: Value[] = [
       'isString',
       ['isStringifiedNumber', true],
       ['isNumber', true, true],
+      ['isStringifiedFiniteNumber', true],
+      ['isFiniteNumber', true, true],
     ],
   },
 ]
