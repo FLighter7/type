@@ -15,4 +15,6 @@ export default <(keyof typeof Type)[]>[
   'isString',
   'isNumber',
   'isStringifiedNumber',
+  'isInfinity',
+  'isStringifiedInfinity',
 ];

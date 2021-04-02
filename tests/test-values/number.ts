@@ -47,6 +47,7 @@ export const NumberValues: Value[] = [
     strictType: 'number',
     passableFunctions: [
       'isNumber',
+      'isInfinity',
     ],
   },
   {
@@ -55,6 +56,7 @@ export const NumberValues: Value[] = [
     strictType: 'number',
     passableFunctions: [
       'isNumber',
+      'isInfinity',
     ],
   },
   {
@@ -121,6 +123,8 @@ export const NumberValues: Value[] = [
       'isString',
       'isStringifiedNumber',
       ['isNumber', true],
+      'isStringifiedInfinity',
+      ['isInfinity', true],
     ],
   },
   {
@@ -131,6 +135,8 @@ export const NumberValues: Value[] = [
       'isString',
       'isStringifiedNumber',
       ['isNumber', true],
+      'isStringifiedInfinity',
+      ['isInfinity', true],
     ],
   },
   {
@@ -141,6 +147,8 @@ export const NumberValues: Value[] = [
       'isString',
       'isStringifiedNumber',
       ['isNumber', true],
+      'isStringifiedInfinity',
+      ['isInfinity', true],
     ],
   },
 ]
