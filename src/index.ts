@@ -22,3 +22,6 @@ export * from './isFunction.js';
 // Boolean
 export * from './isBoolean.js';
 export * from './isStringifiedBoolean.js';
+
+// String
+export * from './isString.js';
