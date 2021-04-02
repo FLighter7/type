@@ -33,3 +33,5 @@ export * from './isInfinity.js';
 export * from './isStringifiedInfinity.js';
 export * from './isFiniteNumber.js';
 export * from './isStringifiedFiniteNumber.js';
+export * from './isPositiveNumber.js';
+export * from './isStringifiedPositiveNumber.js';
