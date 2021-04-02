@@ -18,3 +18,7 @@ export * from './isStringifiedNan.js';
 
 // Function
 export * from './isFunction.js';
+
+// Boolean
+export * from './isBoolean.js';
+export * from './isStringifiedBoolean.js';
