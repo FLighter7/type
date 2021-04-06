@@ -23,4 +23,6 @@ export default <(keyof typeof Type)[]>[
   'isStringifiedPositiveNumber',
   'isNegativeNumber',
   'isStringifiedNegativeNumber',
+  'isPositiveFiniteNumber',
+  'isStringifiedPositiveFiniteNumber',
 ];
