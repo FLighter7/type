@@ -18,6 +18,7 @@ export const NumberValues: Value[] = [
       'isNumber',
       'isFiniteNumber',
       'isNegativeNumber',
+      'isNegativeFiniteNumber',
     ],
   },
   {
@@ -39,6 +40,7 @@ export const NumberValues: Value[] = [
       'isNumber',
       'isFiniteNumber',
       'isNegativeNumber',
+      'isNegativeFiniteNumber',
     ],
   },
   {
@@ -102,6 +104,8 @@ export const NumberValues: Value[] = [
       ['isFiniteNumber', true],
       'isStringifiedNegativeNumber',
       ['isNegativeNumber', true],
+      'isStringifiedNegativeFiniteNumber',
+      ['isNegativeFiniteNumber', true],
     ],
   },
   {
@@ -132,6 +136,8 @@ export const NumberValues: Value[] = [
       ['isFiniteNumber', true],
       'isStringifiedNegativeNumber',
       ['isNegativeNumber', true],
+      'isStringifiedNegativeFiniteNumber',
+      ['isNegativeFiniteNumber', true],
     ],
   },
   {
