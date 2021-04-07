@@ -29,4 +29,6 @@ export default <(keyof typeof Type)[]>[
   'isStringifiedNegativeFiniteNumber',
   'isInt',
   'isStringifiedInt',
+  'isFloat',
+  'isStringifiedFloat',
 ];
