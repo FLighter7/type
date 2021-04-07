@@ -41,3 +41,5 @@ export * from './isPositiveFiniteNumber.js';
 export * from './isStringifiedPositiveFiniteNumber.js';
 export * from './isNegativeFiniteNumber.js';
 export * from './isStringifiedNegativeFiniteNumber.js';
+export * from './isInt.js';
+export * from './isStringifiedInt.js';
