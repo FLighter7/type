@@ -43,3 +43,5 @@ export * from './isNegativeFiniteNumber.js';
 export * from './isStringifiedNegativeFiniteNumber.js';
 export * from './isInt.js';
 export * from './isStringifiedInt.js';
+export * from './isFloat.js';
+export * from './isStringifiedFloat.js';
