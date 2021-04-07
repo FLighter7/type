@@ -8,6 +8,7 @@ export const NumberValues: Value[] = [
     passableFunctions: [
       'isNumber',
       'isFiniteNumber',
+      'isInt',
     ],
   },
   {
@@ -19,6 +20,7 @@ export const NumberValues: Value[] = [
       'isFiniteNumber',
       'isNegativeNumber',
       'isNegativeFiniteNumber',
+      'isInt',
     ],
   },
   {
@@ -30,6 +32,7 @@ export const NumberValues: Value[] = [
       'isFiniteNumber',
       'isPositiveNumber',
       'isPositiveFiniteNumber',
+      'isInt',
     ],
   },
   {
@@ -90,6 +93,8 @@ export const NumberValues: Value[] = [
       ['isNumber', true],
       'isStringifiedFiniteNumber',
       ['isFiniteNumber', true],
+      'isStringifiedInt',
+      ['isInt', true],
     ],
   },
   {
@@ -106,6 +111,8 @@ export const NumberValues: Value[] = [
       ['isNegativeNumber', true],
       'isStringifiedNegativeFiniteNumber',
       ['isNegativeFiniteNumber', true],
+      'isStringifiedInt',
+      ['isInt', true],
     ],
   },
   {
@@ -122,6 +129,8 @@ export const NumberValues: Value[] = [
       ['isPositiveNumber', true],
       'isStringifiedPositiveFiniteNumber',
       ['isPositiveFiniteNumber', true],
+      'isStringifiedInt',
+      ['isInt', true],
     ],
   },
   {
