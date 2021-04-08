@@ -9,6 +9,7 @@ import {StringValues}    from './string';
 import {RegExpValues}    from './regexp';
 import {FunctionValues}  from './function';
 import {NumberValues}    from './number';
+import {BigIntValues}    from './bigint';
 
 export default <Value[]>[
   ...UndefinedValues,
@@ -20,4 +21,5 @@ export default <Value[]>[
   ...RegExpValues,
   ...FunctionValues,
   ...NumberValues,
+  ...BigIntValues,
 ]
