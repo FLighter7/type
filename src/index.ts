@@ -45,3 +45,7 @@ export * from './isInt.js';
 export * from './isStringifiedInt.js';
 export * from './isFloat.js';
 export * from './isStringifiedFloat.js';
+
+// BigInt
+export * from './isBigInt.js';
+export * from './isStringifiedBigInt.js';
