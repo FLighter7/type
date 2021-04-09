@@ -5,7 +5,7 @@ export const RegExpValues: Value[] = [
     value: /RegExp/,
     type: 'object',
     strictType: 'regexp',
-    passableFunctions: [],
+    passableFunctions: ['isRegExp'],
   },
   {
     value: '/RegExp/',
@@ -19,7 +19,7 @@ export const RegExpValues: Value[] = [
     value: new RegExp('RegExp'),
     type: 'object',
     strictType: 'regexp',
-    passableFunctions: [],
+    passableFunctions: ['isRegExp'],
   },
   {
     value: '/RegExp/i',

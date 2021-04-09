@@ -34,4 +34,5 @@ export default <(keyof typeof Type)[]>[
   'isBigInt',
   'isStringifiedBigInt',
   'isArray',
+  'isRegExp',
 ];

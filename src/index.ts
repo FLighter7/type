@@ -52,3 +52,6 @@ export * from './isStringifiedBigInt.js';
 
 // Array
 export * from './isArray.js';
+
+// RegExp
+export * from './isRegExp.js';
