@@ -33,4 +33,5 @@ export default <(keyof typeof Type)[]>[
   'isStringifiedFloat',
   'isBigInt',
   'isStringifiedBigInt',
+  'isArray',
 ];
