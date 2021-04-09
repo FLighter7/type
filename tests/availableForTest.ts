@@ -35,4 +35,8 @@ export default <(keyof typeof Type)[]>[
   'isStringifiedBigInt',
   'isArray',
   'isRegExp',
+  'isMap',
+  'isSet',
+  'isWeakMap',
+  'isWeakSet',
 ];

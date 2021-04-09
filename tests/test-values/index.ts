@@ -11,6 +11,7 @@ import {FunctionValues}  from './function';
 import {NumberValues}    from './number';
 import {BigIntValues}    from './bigint';
 import {ArrayValues}     from './array';
+import {MapSetValues}    from './map, set, weak-map, weak-set';
 
 export default <Value[]>[
   ...UndefinedValues,
@@ -24,4 +25,5 @@ export default <Value[]>[
   ...NumberValues,
   ...BigIntValues,
   ...ArrayValues,
+  ...MapSetValues,
 ]

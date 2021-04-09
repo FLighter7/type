@@ -55,3 +55,11 @@ export * from './isArray.js';
 
 // RegExp
 export * from './isRegExp.js';
+
+// Map
+export * from './isMap.js';
+export * from './isWeakMap.js';
+
+// Set
+export * from './isSet.js';
+export * from './isWeakSet.js';
