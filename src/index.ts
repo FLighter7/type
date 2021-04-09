@@ -49,3 +49,6 @@ export * from './isStringifiedFloat.js';
 // BigInt
 export * from './isBigInt.js';
 export * from './isStringifiedBigInt.js';
+
+// Array
+export * from './isArray.js';
