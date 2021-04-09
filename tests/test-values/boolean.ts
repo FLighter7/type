@@ -21,6 +21,7 @@ export const BooleanValues: Value[] = [
       'isStringifiedBoolean',
       ['isBoolean', true],
       'isString',
+      'isJsonString',
     ],
   },
   {
@@ -31,6 +32,7 @@ export const BooleanValues: Value[] = [
       'isStringifiedBoolean',
       ['isBoolean', true],
       'isString',
+      'isJsonString',
     ],
   },
   {

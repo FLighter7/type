@@ -25,6 +25,7 @@ export const BigIntValues: Value[] = [
       ['isPositiveFiniteNumber', true],
       'isStringifiedBigInt',
       ['isBigInt', true],
+      'isJsonString',
     ],
   },
 ]

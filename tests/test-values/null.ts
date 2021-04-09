@@ -15,6 +15,7 @@ export const NullValues: Value[] = [
       'isStringifiedNull',
       ['isNull', true],
       'isString',
+      'isJsonString',
     ],
   },
 ]

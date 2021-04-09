@@ -97,6 +97,7 @@ export const NumberValues: Value[] = [
       ['isFiniteNumber', true],
       'isStringifiedInt',
       ['isInt', true],
+      'isJsonString',
     ],
   },
   {
@@ -115,6 +116,7 @@ export const NumberValues: Value[] = [
       ['isNegativeFiniteNumber', true],
       'isStringifiedInt',
       ['isInt', true],
+      'isJsonString',
     ],
   },
   {
@@ -133,6 +135,7 @@ export const NumberValues: Value[] = [
       ['isPositiveFiniteNumber', true],
       'isStringifiedInt',
       ['isInt', true],
+      'isJsonString',
     ],
   },
   {
@@ -151,6 +154,7 @@ export const NumberValues: Value[] = [
       ['isNegativeFiniteNumber', true],
       'isStringifiedFloat',
       ['isFloat', true],
+      'isJsonString',
     ],
   },
   {
@@ -169,6 +173,7 @@ export const NumberValues: Value[] = [
       ['isPositiveFiniteNumber', true],
       'isStringifiedFloat',
       ['isFloat', true],
+      'isJsonString',
     ],
   },
   {

@@ -39,4 +39,5 @@ export default <(keyof typeof Type)[]>[
   'isSet',
   'isWeakMap',
   'isWeakSet',
+  'isJsonString',
 ];

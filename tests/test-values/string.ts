@@ -85,4 +85,31 @@ export const StringValues: Value[] = [
       ['isInt', true, true],
     ],
   },
+  {
+    value: '[]',
+    type: 'string',
+    strictType: 'string',
+    passableFunctions: [
+      'isString',
+      'isJsonString',
+    ],
+  },
+  {
+    value: '{}',
+    type: 'string',
+    strictType: 'string',
+    passableFunctions: [
+      'isString',
+      'isJsonString',
+    ],
+  },
+  {
+    value: '""',
+    type: 'string',
+    strictType: 'string',
+    passableFunctions: [
+      'isString',
+      'isJsonString',
+    ],
+  },
 ]
