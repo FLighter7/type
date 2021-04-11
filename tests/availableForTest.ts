@@ -42,4 +42,6 @@ export default <(keyof typeof Type)[]>[
   'isJsonString',
   'isPlainObject',
   'isObject',
+  'getStrictType',
+  'isDate',
 ];

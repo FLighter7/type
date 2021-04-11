@@ -110,8 +110,11 @@ export const ObjectValues: Value[] = [
   {
     value: new Date(),
     type: 'object',
-    strictType: 'object',
-    passableFunctions: ['isObject'],
+    strictType: 'date',
+    passableFunctions: [
+      'isObject',
+      'isDate',
+    ],
   },
   {
     value: Array.prototype,

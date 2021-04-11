@@ -1,5 +1,6 @@
 // Type definitions
 export * from './getType.js';
+export * from './getStrictType.js';
 
 // Undefined
 export * from './isUndefined.js';
@@ -68,3 +69,6 @@ export * from './isWeakSet.js';
 // Object
 export * from './isPlainObject.js';
 export * from './isObject.js';
+
+// Date
+export * from './isDate.js';
