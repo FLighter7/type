@@ -23,18 +23,27 @@ export const ArrayValues: Value[] = [
     value: [1, 2, 3],
     type: 'object',
     strictType: 'array',
-    passableFunctions: ['isArray'],
+    passableFunctions: [
+      'isArray',
+      'isObject',
+    ],
   },
   {
     value: ['1', '2', '3'],
     type: 'object',
     strictType: 'array',
-    passableFunctions: ['isArray'],
+    passableFunctions: [
+      'isArray',
+      'isObject',
+    ],
   },
   {
     value: [true, false],
     type: 'object',
     strictType: 'array',
-    passableFunctions: ['isArray'],
+    passableFunctions: [
+      'isArray',
+      'isObject',
+    ],
   },
 ]

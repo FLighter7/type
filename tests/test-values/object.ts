@@ -8,25 +8,37 @@ export const ObjectValues: Value[] = [
     value: {},
     type: 'object',
     strictType: 'plainobject',
-    passableFunctions: ['isPlainObject'],
+    passableFunctions: [
+      'isPlainObject',
+      'isObject',
+    ],
   },
   {
     value: {foo: 'foo', ...{bar: 'bar'}},
     type: 'object',
     strictType: 'plainobject',
-    passableFunctions: ['isPlainObject'],
+    passableFunctions: [
+      'isPlainObject',
+      'isObject',
+    ],
   },
   {
     value: new Object(),
     type: 'object',
     strictType: 'plainobject',
-    passableFunctions: ['isPlainObject'],
+    passableFunctions: [
+      'isPlainObject',
+      'isObject',
+    ],
   },
   {
     value: Object.create({}),
     type: 'object',
     strictType: 'plainobject',
-    passableFunctions: ['isPlainObject'],
+    passableFunctions: [
+      'isPlainObject',
+      'isObject',
+    ],
   },
   {
     value: {
@@ -35,7 +47,10 @@ export const ObjectValues: Value[] = [
     },
     type: 'object',
     strictType: 'plainobject',
-    passableFunctions: ['isPlainObject'],
+    passableFunctions: [
+      'isPlainObject',
+      'isObject',
+    ],
   },
   {
     value: {
@@ -44,7 +59,10 @@ export const ObjectValues: Value[] = [
     },
     type: 'object',
     strictType: 'plainobject',
-    passableFunctions: ['isPlainObject'],
+    passableFunctions: [
+      'isPlainObject',
+      'isObject',
+    ],
   },
   {
     value: {
@@ -53,25 +71,37 @@ export const ObjectValues: Value[] = [
     },
     type: 'object',
     strictType: 'plainobject',
-    passableFunctions: ['isPlainObject'],
+    passableFunctions: [
+      'isPlainObject',
+      'isObject',
+    ],
   },
   {
     value: Object.prototype,
     type: 'object',
     strictType: 'plainobject',
-    passableFunctions: ['isPlainObject'],
+    passableFunctions: [
+      'isPlainObject',
+      'isObject',
+    ],
   },
   {
     value: {constructor: Object},
     type: 'object',
     strictType: 'plainobject',
-    passableFunctions: ['isPlainObject'],
+    passableFunctions: [
+      'isPlainObject',
+      'isObject',
+    ],
   },
   {
     value: {prototype: 'string'},
     type: 'object',
     strictType: 'plainobject',
-    passableFunctions: ['isPlainObject'],
+    passableFunctions: [
+      'isPlainObject',
+      'isObject',
+    ],
   },
 
   /**
@@ -96,7 +126,7 @@ export const ObjectValues: Value[] = [
     value: class{},
     type: 'function',
     strictType: 'function',
-    passableFunctions: ['isObject', 'isFunction'],
+    passableFunctions: ['isFunction'],
   },
   {
     value: new class{},
@@ -108,7 +138,7 @@ export const ObjectValues: Value[] = [
     value: class Foo{},
     type: 'function',
     strictType: 'function',
-    passableFunctions: ['isObject', 'isFunction'],
+    passableFunctions: ['isFunction'],
   },
   {
     value: (() => {
@@ -127,7 +157,7 @@ export const ObjectValues: Value[] = [
     })(),
     type: 'function',
     strictType: 'function',
-    passableFunctions: ['isObject', 'isFunction'],
+    passableFunctions: ['isFunction'],
   },
   {
     value: (() => {

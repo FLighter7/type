@@ -5,24 +5,36 @@ export const MapSetValues: Value[] = [
     value: new Map(),
     type: 'object',
     strictType: 'map',
-    passableFunctions: ['isMap'],
+    passableFunctions: [
+      'isMap',
+      'isObject',
+    ],
   },
   {
     value: new Set(),
     type: 'object',
     strictType: 'set',
-    passableFunctions: ['isSet'],
+    passableFunctions: [
+      'isSet',
+      'isObject',
+    ],
   },
   {
     value: new WeakMap(),
     type: 'object',
     strictType: 'weakmap',
-    passableFunctions: ['isWeakMap'],
+    passableFunctions: [
+      'isWeakMap',
+      'isObject',
+    ],
   },
   {
     value: new WeakSet(),
     type: 'object',
     strictType: 'weakset',
-    passableFunctions: ['isWeakSet'],
+    passableFunctions: [
+      'isWeakSet',
+      'isObject',
+    ],
   },
 ]

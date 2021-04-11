@@ -41,4 +41,5 @@ export default <(keyof typeof Type)[]>[
   'isWeakSet',
   'isJsonString',
   'isPlainObject',
+  'isObject',
 ];
