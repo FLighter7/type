@@ -20,11 +20,11 @@ export default () => {
           );
 
         // getStrictType
-        // } else if(f === 'getStrictType') {
-        //   test(
-        //     `Strict type of "${prettyValue}" is "${strictType}"`,
-        //     () => expect(Type[f](value)).toBe(strictType)
-        //   );
+        } else if(f === 'getStrictType') {
+          test(
+            `Strict type of "${prettyValue}" is "${strictType}"`,
+            () => expect(Type[f](value)).toBe(strictType)
+          );
 
         // is* functions  
         } else {
