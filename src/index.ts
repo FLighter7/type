@@ -64,3 +64,7 @@ export * from './isWeakMap.js';
 // Set
 export * from './isSet.js';
 export * from './isWeakSet.js';
+
+// Object
+export * from './isPlainObject.js';
+export * from './isObject.js';
