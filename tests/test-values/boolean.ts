@@ -39,6 +39,6 @@ export const BooleanValues: Value[] = [
     value: new Boolean(),
     type: 'object',
     strictType: 'object',
-    passableFunctions: [],
+    passableFunctions: ['isObject'],
   },
 ]

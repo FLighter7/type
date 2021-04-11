@@ -33,7 +33,7 @@ export const StringValues: Value[] = [
     value: new String(''),
     type: 'object',
     strictType: 'object',
-    passableFunctions: [],
+    passableFunctions: ['isObject'],
   },
   {
     value: 'string',
@@ -55,7 +55,7 @@ export const StringValues: Value[] = [
     value: new String('string'),
     type: 'object',
     strictType: 'object',
-    passableFunctions: [],
+    passableFunctions: ['isObject'],
   },
   {
     value: '  ',

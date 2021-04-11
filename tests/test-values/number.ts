@@ -83,7 +83,7 @@ export const NumberValues: Value[] = [
     value: new Number(),
     type: 'object',
     strictType: 'object',
-    passableFunctions: [],
+    passableFunctions: ['isObject'],
   },
   {
     value: '0',

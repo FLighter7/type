@@ -19,7 +19,10 @@ export const RegExpValues: Value[] = [
     value: new RegExp('RegExp'),
     type: 'object',
     strictType: 'regexp',
-    passableFunctions: ['isRegExp'],
+    passableFunctions: [
+      'isRegExp',
+      'isObject',
+    ],
   },
   {
     value: '/RegExp/i',

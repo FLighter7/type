@@ -5,13 +5,19 @@ export const ArrayValues: Value[] = [
     value: [],
     type: 'object',
     strictType: 'array',
-    passableFunctions: ['isArray'],
+    passableFunctions: [
+      'isArray',
+      'isObject',
+    ],
   },
   {
     value: new Array(),
     type: 'object',
     strictType: 'array',
-    passableFunctions: ['isArray'],
+    passableFunctions: [
+      'isArray',
+      'isObject',
+    ],
   },
   {
     value: [1, 2, 3],
