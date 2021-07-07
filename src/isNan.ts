@@ -1,12 +1,26 @@
-import {isStringifiedNan} from './isStringifiedNan.js';
+import {_isSuitable, FlagsType} from './_isSuitable.js';
+
+const n = 'NaN';
 
 /**
- * Checks that a value is `NaN`
+ * Checks that a value is `NaN` or `'NaN'` (as string)
  *
  * @param {unknown} val any value
- * @param {boolean} [checkString = false] also check if a value is `'NaN'` (as string)
+ * @param {FlagsType} [flags] CHECK_STRING or CHECK_STRING_CASE_INSENSITIVE
  * @returns {boolean}
  */
-export const isNan = (val: unknown, checkString = false): boolean => {
-  return val !== val || (checkString && isStringifiedNan(val));
+export const isNan = (val: unknown, flags?: FlagsType): boolean => {
+  const preliminaryResult = val !== val;
+
+  // This condition is faster than in _isSuitable
+  if (!flags) {
+    return preliminaryResult;
+  }
+
+  return _isSuitable({
+    preliminaryResult,
+    val,
+    flags,
+    rightCases: n,
+  });
 };
