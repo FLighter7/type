@@ -49,4 +49,4 @@ export const _isSuitable = ({preliminaryResult, val, flags, rightCases}: isSuita
   }
 
   return true;
-}
+};
