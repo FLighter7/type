@@ -16,11 +16,22 @@ const Functions = {
     return rightCases.find(c => c.toLowerCase() === v) !== undefined;
   },
 
-  // String
+  /**
+   * String
+   */
   STRING_EMPTY:      (v: string): boolean => v.length === 0,    // '' - an empty string
   STRING_NOT_EMPTY:  (v: string): boolean => v.length > 0,      // !'' - not an empty string
   STRING_LETTER:     (v: string): boolean => /^[a-z]$/i.test(v),// one letter from the English alphabet
   STRING_ONE_SYMBOL: (v: string): boolean => v.length === 1,    // any one stringified symbol
+  // Valid json string
+  STRING_JSON: (v: string): boolean => {
+    try {
+      JSON.parse(v);
+      return true;
+    } catch (e) {
+      return false;
+    }
+  },
 
   // Number
   NUMBER_INT:      (v: number): boolean => Number.isInteger(v),// integer
