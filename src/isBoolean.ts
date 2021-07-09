@@ -1,13 +1,26 @@
-import {getType} from './getType.js';
-import {isStringifiedBoolean} from './isStringifiedBoolean.js';
+import {_isSuitable, FlagsType} from './_isSuitable.js';
+
+const rightCases = ['true', 'false'];
 
 /**
- * Checks that a value is `true` or `false`
+ * Checks that a value is `true | false` or `'true' | 'false'` (as string)
  *
  * @param {unknown} val any value
- * @param {boolean} [checkString = false] also check if a value is `'true'` or `'false'` (as string)
+ * @param {FlagsType} [flags] CHECK_STRING or CHECK_STRING_CASE_INSENSITIVE
  * @returns {boolean}
  */
-export const isBoolean = (val: unknown, checkString = false): boolean => {
-  return getType(val) === 'boolean' || (checkString && isStringifiedBoolean(val));
+export const isBoolean = (val: unknown, flags?: FlagsType): boolean => {
+  const preliminaryResult = typeof val === 'boolean';
+
+  // This condition is faster than in _isSuitable
+  if (!flags) {
+    return preliminaryResult;
+  }
+
+  return _isSuitable({
+    preliminaryResult,
+    val,
+    flags,
+    rightCases,
+  });
 };
