@@ -1,5 +1,3 @@
-import {getType} from './getType.js';
-
 /**
  * Checks that a value is function
  *
@@ -8,4 +6,4 @@ import {getType} from './getType.js';
  * @param {unknown} val any value
  * @returns {boolean}
  */
-export const isFunction = (val: unknown): boolean => getType(val) === 'function';
+export const isFunction = (val: unknown): boolean => typeof val === 'function';
