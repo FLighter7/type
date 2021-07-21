@@ -1,13 +1,40 @@
-import {getType} from './getType.js';
-import {isStringifiedBigInt} from './isStringifiedBigInt.js';
+import {FlagsType} from './_isSuitable.js';
+import {FunctionsKeys} from './flags.js';
 
 /**
  * Checks that a value is a big integer
  *
  * @param {unknown} val any value
- * @param {boolean} [checkString = false] also check if a value is a stringified big integer
+ * @param {FlagsType} [flags] CHECK_STRING or CHECK_STRING_CASE_INSENSITIVE
  * @returns {boolean}
  */
-export const isBigInt = (val: unknown, checkString = false): boolean => {
-  return getType(val) === 'bigint' || (checkString && isStringifiedBigInt(val));
+export const isBigInt = (val: unknown, flags?: FlagsType): boolean => {
+  const preliminaryResult = typeof val === 'bigint';
+
+  // This condition is faster than in _isSuitable
+  if (!flags) {
+    return preliminaryResult;
+  }
+
+  // Flags to array
+  const flagsArray = Array.isArray(flags) ? flags : [flags];
+
+  // As string
+  if (
+    flagsArray.includes(FunctionsKeys.CHECK_STRING)
+    || flagsArray.includes(FunctionsKeys.CHECK_STRING_CASE_INSENSITIVE)
+  ) {
+    if (typeof val !== 'string') {
+      return false;
+    }
+
+    try {
+      const n = BigInt(val);
+      return n > Number.MAX_SAFE_INTEGER || n < Number.MIN_SAFE_INTEGER;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  return preliminaryResult;
 };
