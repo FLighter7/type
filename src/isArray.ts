@@ -4,4 +4,4 @@
  * @param {unknown} val any value
  * @returns {boolean}
  */
-export const isArray = (val: unknown): boolean => Array.isArray(val);
+export const isArray = Array.isArray;
