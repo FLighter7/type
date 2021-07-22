@@ -1,5 +1,3 @@
-import {getType} from './getType.js';
-
 /**
  * What is "object" here? As we know, javascript objects are presented in different ways.
  * But in common, if we want to know that a value is an object or not
@@ -14,7 +12,7 @@ import {getType} from './getType.js';
 export const isPlainObject = (val: unknown): boolean => {
   // Type is not an object or a value is null
   // Note: `.toString(null) === [object Null]`, but `val === null` is faster, so let it be here
-  if (getType(val) !== 'object' || val === null) {
+  if (typeof val !== 'object' || val === null) {
     return false;
   }
 
