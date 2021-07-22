@@ -1,5 +1,3 @@
-import {getType} from './getType.js';
-
 /**
  * Checks that a value is an object and not `null`
  *
@@ -9,5 +7,5 @@ import {getType} from './getType.js';
  * @returns {boolean}
  */
 export const isObject = (val: unknown): boolean => {
-  return getType(val) === 'object' && val !== null;
+  return typeof val === 'object' && val !== null;
 };
