@@ -1,26 +1,15 @@
-import {getType} from './getType.js';
-import {isNan} from './isNan.js';
-import {isNull} from './isNull.js';
-import {isArray} from './isArray.js';
-import {isRegExp} from './isRegExp.js';
-import {isMap} from './isMap.js';
-import {isSet} from './isSet.js';
-import {isWeakMap} from './isWeakMap.js';
-import {isWeakSet} from './isWeakSet.js';
-import {isDate} from './isDate.js';
-import {isPlainObject} from './isPlainObject.js';
-
-type TypeofStrictType = 'string' | 'number' | 'bigint' | 'boolean' | 'symbol'
-                      | 'undefined' | 'object' | 'function' | 'nan' | 'null'
-                      | 'array' | 'plainobject' | 'date' | 'regexp' | 'map'
-                      | 'set' | 'weakmap' | 'weakset';
+type TypeofStrictType = 'number' | 'nan'
+                      | 'string' | 'bigint' | 'boolean' | 'symbol' | 'undefined' | 'function'
+                      | 'null' | 'object' | 'plainobject'
+                      | 'notfound'// not found type
+                      | string;// other object types (map, set, weakmap, weakset, array, date, regexp, error, ...)
 
 export const getStrictType = (val: unknown): TypeofStrictType => {
-  const type = getType(val);
+  const type = typeof val;
 
   // Number
   if (type === 'number') {
-    return isNan(val) ? 'nan' : type;
+    return val !== val ? 'nan' : type;
   }
 
   // String, BigInt, Boolean, Symbol, Undefined, Function
@@ -28,53 +17,23 @@ export const getStrictType = (val: unknown): TypeofStrictType => {
     return type;
   }
 
-  /**
-   * Object
-   */
   // Null
-  if (isNull(val)) {
+  if (val === null) {
     return 'null';
   }
 
-  // Array
-  if (isArray(val)) {
-    return 'array';
+  /**
+   * Other object types
+   */
+  const match = (Object.prototype.toString.call(val) as string).match(/^\[object ([a-z0-9]+)\]$/i);
+
+  // Type not found
+  if (!match) {
+    return 'notfound';
   }
 
-  // Plain object
-  if (isPlainObject(val)) {
-    return 'plainobject';
-  }
-
-  // Date
-  if (isDate(val)) {
-    return 'date';
-  }
-
-  // RegExp
-  if (isRegExp(val)) {
-    return 'regexp';
-  }
-
-  // Map
-  if (isMap(val)) {
-    return 'map';
-  }
-
-  // Set
-  if (isSet(val)) {
-    return 'set';
-  }
-
-  // WeakMap
-  if (isWeakMap(val)) {
-    return 'weakmap';
-  }
-
-  // WeakSet
-  if (isWeakSet(val)) {
-    return 'weakset';
-  }
-
-  return 'object';
+  const stringifiedType = match[1].toLowerCase();
+  return stringifiedType === 'object' && val.constructor === Object
+    ? 'plainobject'
+    : stringifiedType;
 };
