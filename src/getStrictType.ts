@@ -31,7 +31,7 @@ export const getStrictType = (val: unknown): TypeofStrictType => {
   /**
    * Other object types
    */
-  const match = (Object.prototype.toString.call(val) as string).match(/^\[object ([a-z0-9]+)\]$/i);
+  const match = (Object.prototype.toString.call(val) as string).match(/^\[object ([a-z0-9]+)\]$/ig);
 
   // Type not found
   if (!match) {
