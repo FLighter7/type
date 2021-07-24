@@ -4,6 +4,12 @@ type TypeofStrictType = 'number' | 'nan'
                       | 'notfound'// not found type
                       | string;// other object types (map, set, weakmap, weakset, array, date, regexp, error, ...)
 
+/**
+ * Return a strict type of the value
+ *
+ * @param {unknown} val any value
+ * @returns {TypeofStrictType}
+ */
 export const getStrictType = (val: unknown): TypeofStrictType => {
   const type = typeof val;
 
