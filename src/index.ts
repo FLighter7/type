@@ -1,56 +1,40 @@
+/**
+ * @file Entry point
+ */
+
+// Flags
+export {FunctionsKeys as TypeFlags} from './flags.js';
+
 // Type definitions
 export * from './getType.js';
 export * from './getStrictType.js';
 
 // Undefined
 export * from './isUndefined.js';
-export * from './isStringifiedUndefined.js';
 
 // Null
 export * from './isNull.js';
-export * from './isStringifiedNull.js';
 
 // Symbol
 export * from './isSymbol.js';
 
 // NaN
 export * from './isNan.js';
-export * from './isStringifiedNan.js';
 
 // Function
 export * from './isFunction.js';
 
 // Boolean
 export * from './isBoolean.js';
-export * from './isStringifiedBoolean.js';
 
 // String
 export * from './isString.js';
-export * from './isJsonString.js';
 
 // Number
 export * from './isNumber.js';
-export * from './isStringifiedNumber.js';
-export * from './isInfinity.js';
-export * from './isStringifiedInfinity.js';
-export * from './isFiniteNumber.js';
-export * from './isStringifiedFiniteNumber.js';
-export * from './isPositiveNumber.js';
-export * from './isStringifiedPositiveNumber.js';
-export * from './isNegativeNumber.js';
-export * from './isStringifiedNegativeNumber.js';
-export * from './isPositiveFiniteNumber.js';
-export * from './isStringifiedPositiveFiniteNumber.js';
-export * from './isNegativeFiniteNumber.js';
-export * from './isStringifiedNegativeFiniteNumber.js';
-export * from './isInt.js';
-export * from './isStringifiedInt.js';
-export * from './isFloat.js';
-export * from './isStringifiedFloat.js';
 
 // BigInt
 export * from './isBigInt.js';
-export * from './isStringifiedBigInt.js';
 
 // Array
 export * from './isArray.js';
@@ -66,9 +50,9 @@ export * from './isWeakMap.js';
 export * from './isSet.js';
 export * from './isWeakSet.js';
 
-// Object
-export * from './isPlainObject.js';
-export * from './isObject.js';
-
 // Date
 export * from './isDate.js';
+
+// Object
+export * from './isObject.js';
+export * from './isPlainObject.js';
