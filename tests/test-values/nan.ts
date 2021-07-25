@@ -9,11 +9,23 @@ export const NanValues: Value[] = [
   },
   {
     value: 'NaN',
-    type: 'string',
-    strictType: 'string',
     passableFunctions: [
-      'isStringifiedNan',
-      ['isNan', true],
+      ['isNan', 'CHECK_STRING'],
+      ['isNan', 'CHECK_STRING_CASE_INSENSITIVE'],
+      'isString',
+    ],
+  },
+  {
+    value: 'NAN',
+    passableFunctions: [
+      ['isNan', 'CHECK_STRING_CASE_INSENSITIVE'],
+      'isString',
+    ],
+  },
+  {
+    value: 'nan',
+    passableFunctions: [
+      ['isNan', 'CHECK_STRING_CASE_INSENSITIVE'],
       'isString',
     ],
   },
