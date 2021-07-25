@@ -4,41 +4,60 @@ export const BooleanValues: Value[] = [
   {
     value: true,
     type: 'boolean',
-    strictType: 'boolean',
     passableFunctions: ['isBoolean'],
   },
   {
     value: false,
     type: 'boolean',
-    strictType: 'boolean',
     passableFunctions: ['isBoolean'],
-  },
-  {
-    value: 'true',
-    type: 'string',
-    strictType: 'string',
-    passableFunctions: [
-      'isStringifiedBoolean',
-      ['isBoolean', true],
-      'isString',
-      'isJsonString',
-    ],
-  },
-  {
-    value: 'false',
-    type: 'string',
-    strictType: 'string',
-    passableFunctions: [
-      'isStringifiedBoolean',
-      ['isBoolean', true],
-      'isString',
-      'isJsonString',
-    ],
   },
   {
     value: new Boolean(),
     type: 'object',
-    strictType: 'object',
     passableFunctions: ['isObject'],
+  },
+  {
+    value: 'true',
+    passableFunctions: [
+      ['isBoolean', 'CHECK_STRING'],
+      ['isBoolean', 'CHECK_STRING_CASE_INSENSITIVE'],
+      'isString',
+    ],
+  },
+  {
+    value: 'false',
+    passableFunctions: [
+      ['isBoolean', 'CHECK_STRING'],
+      ['isBoolean', 'CHECK_STRING_CASE_INSENSITIVE'],
+      'isString',
+    ],
+  },
+  {
+    value: 'TRUE',
+    passableFunctions: [
+      ['isBoolean', 'CHECK_STRING_CASE_INSENSITIVE'],
+      'isString',
+    ],
+  },
+  {
+    value: 'FALSE',
+    passableFunctions: [
+      ['isBoolean', 'CHECK_STRING_CASE_INSENSITIVE'],
+      'isString',
+    ],
+  },
+  {
+    value: 'True',
+    passableFunctions: [
+      ['isBoolean', 'CHECK_STRING_CASE_INSENSITIVE'],
+      'isString',
+    ],
+  },
+  {
+    value: 'False',
+    passableFunctions: [
+      ['isBoolean', 'CHECK_STRING_CASE_INSENSITIVE'],
+      'isString',
+    ],
   },
 ]
