@@ -9,13 +9,24 @@ export const NullValues: Value[] = [
   },
   {
     value: 'null',
-    type: 'string',
-    strictType: 'string',
     passableFunctions: [
-      'isStringifiedNull',
-      ['isNull', true],
+      ['isNull', 'CHECK_STRING'],
+      ['isNull', 'CHECK_STRING_CASE_INSENSITIVE'],
       'isString',
-      'isJsonString',
+    ],
+  },
+  {
+    value: 'NULL',
+    passableFunctions: [
+      ['isNull', 'CHECK_STRING_CASE_INSENSITIVE'],
+      'isString',
+    ],
+  },
+  {
+    value: 'Null',
+    passableFunctions: [
+      ['isNull', 'CHECK_STRING_CASE_INSENSITIVE'],
+      'isString',
     ],
   },
 ]
