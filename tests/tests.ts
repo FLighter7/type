@@ -26,7 +26,7 @@ export default () => {
             () => expect(Type[f](value)).toBe(strictType)
           );
 
-        // is* functions  
+        // is* functions
         } else {
           let valuePassTest = false;
           let args: unknown[] = [];
