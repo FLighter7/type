@@ -12,8 +12,17 @@ export const UndefinedValues: Value[] = [
     type: 'string',
     strictType: 'string',
     passableFunctions: [
-      'isStringifiedUndefined',
-      ['isUndefined', true],
+      ['isUndefined', 'CHECK_STRING'],
+      ['isUndefined', 'CHECK_STRING_CASE_INSENSITIVE'],
+      'isString',
+    ],
+  },
+  {
+    value: 'UNDEFINED',
+    type: 'string',
+    strictType: 'string',
+    passableFunctions: [
+      ['isUndefined', 'CHECK_STRING_CASE_INSENSITIVE'],
       'isString',
     ],
   },
