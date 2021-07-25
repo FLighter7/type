@@ -30,26 +30,38 @@ export default () => {
 
         // is* functions
         } else {
-          let valuePassTest = false;
-          let args: unknown[] = [];
+          let wasExecuted = false;// positive tests were executed
 
-          for(const pf of passableFunctions) {
-            const isArray = Array.isArray(pf);
-            const functionName = isArray ? pf[0] : pf;
+          // Positive testing
+          for (const pf of passableFunctions) {
+            const hasArgs = Array.isArray(pf);
+            const functionName = hasArgs ? pf[0] : pf;
 
-            if(functionName === f) {
-              valuePassTest = true;
-              args = isArray ? (pf as [string, unknown]).slice(1) : [];
-              break;
+            // A function doesn't fit
+            if (functionName !== f) {
+              continue;
             }
+
+            // A function fits -> change flag and execute
+            if (!wasExecuted) {
+              wasExecuted = true;
+            }
+
+            const args = hasArgs ? (pf as [string, unknown]).slice(1) : [];
+
+            test(
+              `The value "${prettyValue}" passes the test with arguments: ${args.join(', ')}`,
+              () => expect(Type[f](value, ...(args as any))).toBe(true)
+            );
           }
 
-          const passText = valuePassTest ? 'passes' : "doesn't pass";
-
-          test(
-            `The value "${prettyValue}" ${passText} the test with arguments: ${args.join(', ')}`,
-            () => expect(Type[f](value, ...(args as any))).toBe(valuePassTest)
-          );
+          // Negative testing
+          if (!wasExecuted) {
+            test(
+              `The value "${prettyValue}" doesn't pass the test`,
+              () => expect(Type[f](value)).toBe(false)
+            );
+          }
         }
       });
     });
