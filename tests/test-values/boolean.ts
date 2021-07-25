@@ -22,6 +22,7 @@ export const BooleanValues: Value[] = [
       ['isBoolean', 'CHECK_STRING'],
       ['isBoolean', 'CHECK_STRING_CASE_INSENSITIVE'],
       'isString',
+      ['isString', 'STRING_JSON'],
     ],
   },
   {
@@ -30,6 +31,7 @@ export const BooleanValues: Value[] = [
       ['isBoolean', 'CHECK_STRING'],
       ['isBoolean', 'CHECK_STRING_CASE_INSENSITIVE'],
       'isString',
+      ['isString', 'STRING_JSON'],
     ],
   },
   {
