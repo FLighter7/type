@@ -41,5 +41,10 @@ export const getStrictType = (val: unknown): TypeofStrictType => {
   const stringifiedType = match[1].toLowerCase();
   return stringifiedType === 'object' && val.constructor === Object
     ? 'plainobject'
-    : stringifiedType;
+    : (
+      // Primitives created by new <String|Number|Boolean>()
+      ['string', 'number', 'boolean'].includes(stringifiedType)
+        ? 'object'
+        : stringifiedType
+      );
 };
