@@ -12,8 +12,6 @@ export const RegExpValues: Value[] = [
   },
   {
     value: '/RegExp/',
-    type: 'string',
-    strictType: 'string',
     passableFunctions: [
       'isString',
     ],
@@ -29,16 +27,12 @@ export const RegExpValues: Value[] = [
   },
   {
     value: '/RegExp/i',
-    type: 'string',
-    strictType: 'string',
     passableFunctions: [
       'isString',
     ],
   },
   {
     value: '/RegExp/gim',
-    type: 'string',
-    strictType: 'string',
     passableFunctions: [
       'isString',
     ],
