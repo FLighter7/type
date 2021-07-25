@@ -45,7 +45,7 @@ export default () => {
           const passText = valuePassTest ? 'passes' : "doesn't pass";
 
           test(
-            `The value "${prettyValue}" ${passText} the test`,
+            `The value "${prettyValue}" ${passText} the test with arguments: ${args.join(', ')}`,
             () => expect(Type[f](value, ...(args as any))).toBe(valuePassTest)
           );
         }
