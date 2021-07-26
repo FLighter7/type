@@ -17,8 +17,8 @@ import {ObjectValues}    from './object';
 export default <Value[]>[
   ...UndefinedValues,
   ...NullValues,
-  ...NanValues,
   ...SymbolValues,
+  ...NanValues,
   ...BooleanValues,
   ...StringValues,
   ...RegExpValues,
