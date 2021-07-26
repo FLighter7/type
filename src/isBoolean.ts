@@ -17,10 +17,5 @@ export const isBoolean = (val: unknown, flags?: FlagsType): boolean => {
     return preliminaryResult;
   }
 
-  return _isSuitable({
-    preliminaryResult,
-    val,
-    flags,
-    rightCases,
-  });
+  return _isSuitable(preliminaryResult, val, flags, rightCases);
 };

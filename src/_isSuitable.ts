@@ -7,14 +7,12 @@ import {Functions, FunctionsKeys, FunctionsKey} from './flags.js';
 // Export this type here to avoid two imports in other files
 export type FlagsType = FunctionsKey | FunctionsKey[];
 
-type isSuitable = {
-  preliminaryResult: boolean,
-  val: unknown,
-  flags: FlagsType,
-  rightCases?: string | string[],
-};
-
-export const _isSuitable = ({preliminaryResult, val, flags, rightCases}: isSuitable): boolean => {
+export const _isSuitable = (
+    preliminaryResult: boolean,
+    val: unknown,
+    flags: FlagsType,
+    rightCases?: string | string[]
+): boolean => {
   // No flags - just return the result
   if (!flags) {
     return preliminaryResult;

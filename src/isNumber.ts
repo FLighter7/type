@@ -71,9 +71,5 @@ export const isNumber = (val: unknown, flags?: FlagsType, emptyStringIsNumber = 
     (indexStringInsensitive >= 0) && (delete flagsArray[indexStringInsensitive]);
   }
 
-  return _isSuitable({
-    preliminaryResult,
-    val,
-    flags: flagsArray,
-  });
+  return _isSuitable(preliminaryResult, val, flagsArray);
 };

@@ -17,9 +17,5 @@ export const isString = (val: unknown, flags?: FlagsType): boolean => {
     return preliminaryResult;
   }
 
-  return _isSuitable({
-    preliminaryResult,
-    val,
-    flags,
-  });
+  return _isSuitable(preliminaryResult, val, flags);
 };
