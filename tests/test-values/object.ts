@@ -128,19 +128,16 @@ export const ObjectValues: Value[] = [
   {
     value: class{},
     type: 'function',
-    strictType: 'function',
     passableFunctions: ['isFunction'],
   },
   {
     value: new class{},
     type: 'object',
-    strictType: 'object',
     passableFunctions: ['isObject'],
   },
   {
     value: class Foo{},
     type: 'function',
-    strictType: 'function',
     passableFunctions: ['isFunction'],
   },
   {
@@ -149,7 +146,6 @@ export const ObjectValues: Value[] = [
       return new Foo();
     })(),
     type: 'object',
-    strictType: 'object',
     passableFunctions: ['isObject'],
   },
   {
@@ -159,7 +155,6 @@ export const ObjectValues: Value[] = [
       return Bar;
     })(),
     type: 'function',
-    strictType: 'function',
     passableFunctions: ['isFunction'],
   },
   {
@@ -169,31 +164,26 @@ export const ObjectValues: Value[] = [
       return new Bar();
     })(),
     type: 'object',
-    strictType: 'object',
     passableFunctions: ['isObject'],
   },
   {
     value: Object.create(null),
     type: 'object',
-    strictType: 'object',
     passableFunctions: ['isObject'],
   },
   {
     value: new class extends Object{},
     type: 'object',
-    strictType: 'object',
     passableFunctions: ['isObject'],
   },
   {
     value: {constructor: Array},
     type: 'object',
-    strictType: 'object',
     passableFunctions: ['isObject'],
   },
   {
     value: {constructor: 'string'},
     type: 'object',
-    strictType: 'object',
     passableFunctions: ['isObject'],
   },
 ]
