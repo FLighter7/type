@@ -2,30 +2,26 @@ import {Value} from './value';
 
 export const BigIntValues: Value[] = [
   {
+    value: 10n,
+    type: 'bigint',
+    passableFunctions: ['isBigInt'],
+  },
+  {
     value: BigInt(Number.MAX_SAFE_INTEGER + 1),
     type: 'bigint',
-    strictType: 'bigint',
     passableFunctions: ['isBigInt'],
   },
   {
     value: String(Number.MAX_SAFE_INTEGER + 1),
-    type: 'string',
-    strictType: 'string',
     passableFunctions: [
       'isString',
-      'isStringifiedNumber',
-      ['isNumber', true],
-      'isStringifiedInt',
-      ['isInt', true],
-      'isStringifiedFiniteNumber',
-      ['isFiniteNumber', true],
-      'isStringifiedPositiveNumber',
-      ['isPositiveNumber', true],
-      'isStringifiedPositiveFiniteNumber',
-      ['isPositiveFiniteNumber', true],
-      'isStringifiedBigInt',
-      ['isBigInt', true],
-      'isJsonString',
+      ['isBigInt', 'CHECK_STRING'],
+      ['isBigInt', 'CHECK_STRING_CASE_INSENSITIVE'],
+      ['isNumber', ['CHECK_STRING', 'NUMBER_INT']],
+      ['isNumber', ['CHECK_STRING', 'NUMBER_FINITE']],
+      ['isNumber', ['CHECK_STRING', 'NUMBER_POSITIVE']],
+      ['isNumber', ['CHECK_STRING', 'NUMBER_FINITE', 'NUMBER_POSITIVE']],
+      ['isNumber', ['CHECK_STRING', 'NUMBER_INT', 'NUMBER_FINITE', 'NUMBER_POSITIVE']],
     ],
   },
 ]
