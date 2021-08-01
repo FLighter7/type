@@ -2,7 +2,7 @@
  * @file Flags checker
  */
 
-import {Functions, FunctionsKeys, FunctionsKey} from './flags.js';
+import {Functions, TypeFlags, FunctionsKey} from './flags.js';
 
 // Export this type here to avoid two imports in other files
 export type FlagsType = FunctionsKey | FunctionsKey[];
@@ -23,8 +23,8 @@ export const _isSuitable = (
 
   // If the result is false and we don't have flags for checking strings
   if (!preliminaryResult
-    && !flags.includes(FunctionsKeys.CHECK_STRING)
-    && !flags.includes(FunctionsKeys.CHECK_STRING_CASE_INSENSITIVE)
+    && !flags.includes(TypeFlags.CHECK_STRING)
+    && !flags.includes(TypeFlags.CHECK_STRING_CASE_INSENSITIVE)
   ) {
     return false;
   }

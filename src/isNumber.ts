@@ -4,7 +4,7 @@
  */
 
 import {_isSuitable, FlagsType} from './_isSuitable.js';
-import {FunctionsKeys} from './flags.js';
+import {TypeFlags} from './flags.js';
 
 /**
  * Inner function: checks that a value is number and not `NaN`
@@ -37,8 +37,8 @@ export const isNumber = (val: unknown, flags?: FlagsType, emptyStringIsNumber = 
   const flagsArray = Array.isArray(flags) ? flags : [flags];
 
   // Check as string
-  const indexString = flagsArray.indexOf(FunctionsKeys.CHECK_STRING);
-  const indexStringInsensitive = flagsArray.indexOf(FunctionsKeys.CHECK_STRING_CASE_INSENSITIVE);
+  const indexString = flagsArray.indexOf(TypeFlags.CHECK_STRING);
+  const indexStringInsensitive = flagsArray.indexOf(TypeFlags.CHECK_STRING_CASE_INSENSITIVE);
   if (indexString >= 0 || indexStringInsensitive >= 0) {
     if (typeof val !== 'string') {
       return false;
@@ -53,7 +53,7 @@ export const isNumber = (val: unknown, flags?: FlagsType, emptyStringIsNumber = 
     }
 
     // Special case for case insensitive "infinity"
-    const indexInfinity = flagsArray.indexOf(FunctionsKeys.NUMBER_INFINITE);
+    const indexInfinity = flagsArray.indexOf(TypeFlags.NUMBER_INFINITE);
     if (indexStringInsensitive >= 0 && indexInfinity >= 0) {
       if (/^[+-]?infinity$/i.test(val as string)) {
         val = (val as string).toLowerCase().replace(/i/, 'I');

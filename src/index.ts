@@ -3,7 +3,7 @@
  */
 
 // Flags
-export {FunctionsKeys as TypeFlags} from './flags.js';
+export {TypeFlags} from './flags.js';
 
 // Type definitions
 export * from './getType.js';

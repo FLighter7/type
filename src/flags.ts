@@ -48,14 +48,14 @@ type createEnumType<T> = {[K in keyof T]: K};
 type FunctionsEnum = createEnumType<typeof Functions>;
 type FunctionsKey = keyof FunctionsEnum;
 
-const FunctionsKeys = {} as FunctionsEnum;
+const TypeFlags = {} as FunctionsEnum;
 for (const key of Object.keys(Functions)) {
-  FunctionsKeys[key] = key;
+  TypeFlags[key] = key;
 }
 
 export {
   Functions,
-  FunctionsKeys,
+  TypeFlags,
   FunctionsEnum,
   FunctionsKey,
 };

@@ -1,5 +1,5 @@
 import {FlagsType} from './_isSuitable.js';
-import {FunctionsKeys} from './flags.js';
+import {TypeFlags} from './flags.js';
 
 /**
  * Checks that a value is a big integer
@@ -21,8 +21,8 @@ export const isBigInt = (val: unknown, flags?: FlagsType): boolean => {
 
   // As string
   if (
-    flagsArray.includes(FunctionsKeys.CHECK_STRING)
-    || flagsArray.includes(FunctionsKeys.CHECK_STRING_CASE_INSENSITIVE)
+    flagsArray.includes(TypeFlags.CHECK_STRING)
+    || flagsArray.includes(TypeFlags.CHECK_STRING_CASE_INSENSITIVE)
   ) {
     if (typeof val !== 'string') {
       return false;
