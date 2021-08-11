@@ -31,8 +31,8 @@ const {<function name>} = require('@flighter/type/umd/<function name>.cjs');
 
 ## API
 
-**Note:** Some note about flags
-
+- [FlagsType](docs/flags.md)
+---
 - [getType(val: unknown): string](docs/get-type.md)
 - [getStrictType(val: unknown): string](docs/get-strict-type.md)
 - [isUndefined(val: unknown, flags?: FlagsType): boolean](docs/is-undefined.md)
