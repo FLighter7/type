@@ -4,7 +4,9 @@
 
 // Functions
 const Functions = {
-  // Common
+  /**
+   * Common
+   */
   // Case sensitive
   CHECK_STRING: (v: unknown, rightCases: string[]): boolean => typeof v === 'string' && rightCases.includes(v),
   // Case insensitive
@@ -15,6 +17,8 @@ const Functions = {
     v = v.toLowerCase();
     return rightCases.find((c) => c.toLowerCase() === v) !== undefined;
   },
+  // Logical OR for CHECK_STRING or CHECK_STRING_CASE_INSENSITIVE
+  OR: 'OR',
 
   /**
    * String
@@ -33,7 +37,9 @@ const Functions = {
     }
   },
 
-  // Number
+  /**
+   * Number
+   */
   NUMBER_INT: (v: number): boolean => Number.isInteger(v), // integer
   NUMBER_FLOAT: (v: number): boolean => Number.isFinite(v) && !Number.isInteger(v), // float
   NUMBER_FINITE: (v: number): boolean => Number.isFinite(v), // not -Infinity, +Infinity, NaN
