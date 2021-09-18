@@ -3,9 +3,7 @@
  */
 
 import {Functions, TypeFlags, FunctionsKey} from './flags.js';
-
-const checkString = TypeFlags.CHECK_STRING;
-const checkStringInsensitive = TypeFlags.CHECK_STRING_CASE_INSENSITIVE;
+import {_getCommonFlags} from './_getCommonFlags.js';
 
 // Export this type here to avoid two imports in other files
 export type FlagsType = FunctionsKey | FunctionsKey[];
@@ -25,30 +23,7 @@ export const _isSuitable = (
   flags = Array.isArray(flags) ? flags : [flags];
 
   // Has CHECK_STRING, CHECK_STRING_CASE_INSENSITIVE, OR
-  let hasString = false;
-  let hasStringInsensitive = false;
-  let hasCheckString = false;
-  let hasOr = false;
-
-  for (let i = 0; i < flags.length; i++) {
-    const flag = flags[i];
-
-    if (!hasString && flag === checkString) {
-      hasString = true;
-      delete flags[i];
-    } else if (!hasStringInsensitive && flag === checkStringInsensitive) {
-      hasStringInsensitive = true;
-      delete flags[i];
-    } else if (!hasOr && flag === TypeFlags.OR) {
-      hasOr = true;
-      delete flags[i];
-    }
-
-    hasCheckString = hasString || hasStringInsensitive;
-    if (hasCheckString && hasOr) {
-      break;
-    }
-  }
+  const [hasString, , hasCheckString, hasOr] = _getCommonFlags(flags);
 
   /**
    * 4 cases:
@@ -64,8 +39,8 @@ export const _isSuitable = (
   if (hasCheckString) {
     rightCases = Array.isArray(rightCases) ? rightCases : [rightCases];
     isNeededString = hasString
-      ? Functions[checkString](val, rightCases)
-      : Functions[checkStringInsensitive](val, rightCases);
+      ? Functions[TypeFlags.CHECK_STRING](val, rightCases)
+      : Functions[TypeFlags.CHECK_STRING_CASE_INSENSITIVE](val, rightCases);
   }
 
   if (
