@@ -6,7 +6,7 @@ const u = 'undefined';
  * Checks that a value is `undefined` or `'undefined'` (as string)
  *
  * @param {unknown} val any value
- * @param {FlagsType} [flags] CHECK_STRING or CHECK_STRING_CASE_INSENSITIVE
+ * @param {FlagsType} [flags] CHECK_STRING, CHECK_STRING_CASE_INSENSITIVE, OR
  * @returns {boolean}
  */
 export const isUndefined = (val: unknown, flags?: FlagsType): boolean => {
