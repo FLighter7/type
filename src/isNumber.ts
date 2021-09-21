@@ -4,6 +4,7 @@
  */
 
 import {_isSuitable, FlagsType} from './_isSuitable.js';
+import {_getCommonFlags} from './_getCommonFlags.js';
 import {TypeFlags} from './flags.js';
 
 /**
@@ -20,13 +21,13 @@ const _isNumber = (val: unknown): boolean => typeof val === 'number' && val === 
  * Note: `new Number` **is not** a number, it's an object
  *
  * @param {unknown} val any value
- * @param {FlagsType} [flags] CHECK_STRING, CHECK_STRING_CASE_INSENSITIVE, NUMBER_*
+ * @param {FlagsType} [flags] CHECK_STRING, CHECK_STRING_CASE_INSENSITIVE, OR, NUMBER_*
  * @param {boolean} [emptyStringIsNumber = false] if `true` then an empty string or string with spaces only
  * are equal to number and the result for them is `true`
  * @returns {boolean}
  */
 export const isNumber = (val: unknown, flags?: FlagsType, emptyStringIsNumber = false): boolean => {
-  let preliminaryResult = _isNumber(val);
+  const preliminaryResult = _isNumber(val);
 
   // This condition is faster than in _isSuitable
   if (!flags) {
@@ -34,42 +35,52 @@ export const isNumber = (val: unknown, flags?: FlagsType, emptyStringIsNumber = 
   }
 
   // Flags to array
-  const flagsArray = Array.isArray(flags) ? flags : [flags];
+  flags = Array.isArray(flags) ? flags : [flags];
 
+  // Has CHECK_STRING, CHECK_STRING_CASE_INSENSITIVE, OR
+  const [, hasStringInsensitive, hasCheckString, hasOr] = _getCommonFlags(flags);
+
+  /**
+   * 4 cases:
+   * 1. has check string, has or
+   * 2. has check string, has not or
+   * 3. has not check string, has or
+   * 4. has not check string, has not or
+   *
+   * *If it has not check string then "OR" doesn't matter
+   */
   // Check as string
-  const indexString = flagsArray.indexOf(TypeFlags.CHECK_STRING);
-  const indexStringInsensitive = flagsArray.indexOf(TypeFlags.CHECK_STRING_CASE_INSENSITIVE);
-  if (indexString >= 0 || indexStringInsensitive >= 0) {
-    if (typeof val !== 'string') {
-      return false;
-    }
-
+  let isNeededString = false;
+  if (hasCheckString && typeof val === 'string') {
     // Trim spaces
     if (!emptyStringIsNumber) {
       val = val.trim();
-      if ((val as string).length === 0) {
-        return false;
-      }
     }
 
     // Special case for case insensitive "infinity"
-    const indexInfinity = flagsArray.indexOf(TypeFlags.NUMBER_INFINITE);
-    if (indexStringInsensitive >= 0 && indexInfinity >= 0) {
+    const indexInfinity = flags.indexOf(TypeFlags.NUMBER_INFINITE);
+    if (hasStringInsensitive && indexInfinity >= 0) {
       if (/^[+-]?infinity$/i.test(val as string)) {
         val = (val as string).toLowerCase().replace(/i/, 'I');
-        delete flagsArray[indexInfinity];
-      } else {
-        return false;
+        isNeededString = true;
+        delete flags[indexInfinity];
       }
+    } else {
+      val = +val;
+      isNeededString = _isNumber(val);
     }
-
-    val = +val;
-    preliminaryResult = _isNumber(val);
-
-    // Do not change the length of flags array
-    (indexString >= 0) && (delete flagsArray[indexString]);
-    (indexStringInsensitive >= 0) && (delete flagsArray[indexStringInsensitive]);
   }
 
-  return _isSuitable(preliminaryResult, val, flagsArray);
+  if (
+    // 1
+    (hasCheckString && hasOr && !preliminaryResult && !isNeededString)
+    // 2 - preliminary result doesn't matter, check string only
+    || (hasCheckString && !hasOr && !isNeededString)
+    // 3, 4 - if the result is false then return it (do not check any other flags)
+    || (!hasCheckString && !preliminaryResult)
+  ) {
+    return false;
+  }
+
+  return _isSuitable(true, val, flags);
 };
