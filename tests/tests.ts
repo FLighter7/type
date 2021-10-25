@@ -14,7 +14,7 @@ export default () => {
 
         // getType
         if(f === 'getType') {
-          type = type ?? 'string';;// simplify
+          type = type ?? 'string';// simplify
           test(
             `Type of "${prettyValue}" is "${type}"`,
             () => expect(Type[f](value)).toBe(type)
