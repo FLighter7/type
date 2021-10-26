@@ -37,7 +37,7 @@ const {<function name>} = require('@flighter/type/umd/<function name>.cjs');
 - [getStrictType(val: unknown): string](docs/get-strict-type.md)
 - [isUndefined(val: unknown, flags?: FlagsType): boolean](docs/is-undefined.md)
 - [isNull(val: unknown, flags?: FlagsType): boolean](docs/is-null.md)
-- [isNaN(val: unknown, flags?: FlagsType): boolean](docs/is-nan.md)
+- [isNan(val: unknown, flags?: FlagsType): boolean](docs/is-nan.md)
 - [isString(val: unknown, flags?: FlagsType): boolean](docs/is-string.md)
 - [isNumber(val: unknown, flags?: FlagsType, emptyStringIsNumber?: boolean = false): boolean](docs/is-number.md)
 - [isBoolean(val: unknown, flags?: FlagsType): boolean](docs/is-boolean.md)
