@@ -1,13 +1,14 @@
 {
-  "completed":   false,
+  "completed":   true,
   "name":        "@flighter/type",
   "version":     "1.0.0",
   "description": "One more library for defining types",
   "license":     "MIT",
   "author":      "FLighter",
   "repository":  "github:FLighter7/type",
-  "keywords":    [],
+  "keywords":    ["type", "check", "is", "typeof", "types", "number", "string", "boolean"],
   "main":        "esm/index.js",
+  "types":       "esm/index.d.ts",
   "files":       ["esm", "umd"],
   "type":        "module",
   "scripts": {
